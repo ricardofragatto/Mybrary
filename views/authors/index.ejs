@@ -1,0 +1,23 @@
+<section>
+   <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <h2>Search Authors</h2>
+            <form action="/authors" method="GET" class="row">
+               <div class="col-12 mt-3">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" class="form-control" name="name">
+               </div>
+               <div class="col-12 d-flex justify-content-end mt-2">
+                  <button type="submit" class="btn btn-primary">Search</button>
+               </div>
+            </form>
+            <ul class="mt-4">
+               <% authors.forEach(author => { %>
+                  <li><%= author.name %></li>
+               <% }) %>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
